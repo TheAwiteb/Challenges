@@ -1,12 +1,12 @@
-#Script guess the number and has 10 attempts
-
+import numpy
 import random
 from time import sleep
 
 def generateNumbers(numbers):
     'It generates a number and puts it in List so that it does not repeat again'
     while True:
-        number = random.randint(smallNum,largeNum)
+        number = numpy.arange(smallNum,largeNum).tolist()
+        number = number[int(len(number) / 2)]
         if number in numbers:
             pass
         else:
@@ -23,14 +23,14 @@ while True:
     for i in range(attempts):
         print(f"\n\nOk i have {attempts} attempts")
         number = generateNumbers(numbers)
-        #print(f'yor number between {smallNum} and {largeNum}')
+        print(f'yor number between {smallNum} and {largeNum}')
         print(f'\nI think is {number}')
         print(f"   [1]your number is greater {number}\n   [2]your number is younger {number}\n   [3]Yes is {number}")
         choice = input("\nChoice 1 or 2 or 3: ")
         if choice == '1':
             smallNum = number
         elif choice == '2':
-            largeNum = number
+            largeNum = number + 1
         elif choice == '3':
             print('Yes i win..!')
             break
