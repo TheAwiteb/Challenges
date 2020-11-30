@@ -45,5 +45,3 @@ def is_valid(ipv4 = ''):
         return True
     else:
         return False
-t = input("prompt: ")
-print(is_valid(t))

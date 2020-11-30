@@ -24,6 +24,3 @@ def blocks(step):
     else:
         return 0
     return int(a + b + c)
-
-a = int(input('>: '))
-print(blocks(a))

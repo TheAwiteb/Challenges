@@ -30,9 +30,3 @@ def make_rug(length = 5 , width = 3, char='#'):
               string = char * width
           list_rug.append(string)
      return list_rug
-
-leng = int(input('length: '))
-wid = int(input('width: '))
-cr = input("char: ")
-a = make_rug(leng,wid,cr)
-print(str(a).replace(' ', '\n').replace('[','\n').replace(']','\n'))
