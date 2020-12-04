@@ -24,7 +24,7 @@ def dif_ciph(input_):
         for char in input_:
             indx = input_.index(char)
             if indx in indexL:
-                num = ord(char) - ord(input_[indexL[-1]])
+                num = ord(char) - ord(input_[indexL.pop])
             else:
                 if indx == 0:
                     num = ord(char)
